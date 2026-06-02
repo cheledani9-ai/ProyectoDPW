@@ -17,8 +17,8 @@ body {
 /* menu */
 header{
         height: 5rem;
-        background: #FDF0D5;
-        border: 2px solid rgb(201, 102, 10);
+        background: #9eb8ff;
+        border: 1px solid #2a2fbb;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -35,12 +35,18 @@ header{
         float:initial ;
         }
 
+.menu ul {
+    display: flex;
+    gap: 25px;
+}
+
 a {
     text-decoration: none;
     color: #000000;
 }
 
 .menu li {
+    transition: background 0.3s;
     transition: transform 0.4s;
     padding: 10px;
 }
@@ -52,7 +58,7 @@ ul {
 }
 
 .menu li:hover{
-        background-color: #F4A261;
+        background-color: #edf3ff;
         border-radius: 20px;
         padding: 8px;
         transform: scale(1);
@@ -74,7 +80,7 @@ ul {
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    background: #f88425;
+    background: #2a2fbb;
     cursor: pointer;
     color: #ffffff;
 }
@@ -83,7 +89,7 @@ ul {
 /* Contenido */
 .about{
     padding:90px 8%;
-    background:#fffaf5;
+    background:#ffff;
     flex: 1;
 }
 
@@ -95,7 +101,7 @@ ul {
 }
 
 .about-text span{
-    color:#ff8800;
+    color:#ff6b6b;
     font-weight:bold;
     letter-spacing:1px;
 }
@@ -115,7 +121,7 @@ ul {
 
 .about-text button{
     padding:15px 28px;
-    background:#ff8800;
+    background:#2a2fbb;
     border:none;
     border-radius:12px;
     cursor:pointer;
@@ -135,10 +141,12 @@ ul {
 }
 
 .about-card{
-    background:white;
+    backdrop-filter: blur(20px);
+    background: linear-gradient(135deg, #edf3ff, #9eb8ff);
+    border: 1px solid #2a2fbb;
     padding:30px;
     border-radius:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
     transition:0.3s;
 }
 
@@ -147,18 +155,18 @@ ul {
 }
 
 .about-card h3{
-    color:#ff8800;
+    color:  #2a2fbb;
     margin-bottom:15px;
     font-size:24px;
 }
 
 .about-card p {
-    color:#666 !important;
+    color:#000000 !important;
     line-height:1.7;
 }
 
 .about-card ol li {
-    color: #666 !important;
+    color: #000000 !important;
 }
 
 /* ventana emegente */
@@ -186,14 +194,14 @@ ul {
 .modal-contenido form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
 
 .modal-contenido {
     background: #ffffff;
-    padding: 60px;
+    padding: 50px;
     border-radius: 12px;
-    width: 410px;
+    width: 400px;
     position: relative;
     transform: scale(0.8);
     transition: transform 0.3s ease;
@@ -215,18 +223,19 @@ ul {
 .modal-contenido textarea {
     width: 100%;
     margin: 2px 0;
-    padding: 10px;
+    padding: 7px;
     border-radius: 8px;
     border: 1px solid #ccc;
 }
 
 .forgotpassword {
     margin: 1px;
+    
 }
 
 .modal-contenido input[type="submit"] {
-    background: #f88425;
-    color: white;
+    background: #2a2fbb;
+    color: #ffffff;
     border: none;
     cursor: pointer;
     transition: 0.3s;
@@ -234,15 +243,16 @@ ul {
 }
 
 .modal-contenido input[type="submit"]:hover {
-    background: #e06f1a;
+    background: #9eb8ff;
+    color: #000000;
+    border: 2px solid #2a2fbb;
 }
 
 /* footer */
 
 .footer {
-    background: #dd7621;
-    border-top-left-radius: 45% 100px;
-    color: #ffffff;
+    background: #9eb8ff;
+    color: #000000;
     padding: 5.2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -269,17 +279,17 @@ ul {
 
 .footer-col ul li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     transform: 0.3s;
 }
 
 .footer-col ul li a:hover {
-    color: #a5a3a3;
+    color: white;
 }
 
 .footer-bottom {
     text-align: center;
-    border-top: 1px solid rgb(255, 255, 255);
+    border-top: 3px solid rgb(255, 255, 255);
     margin-top: 30px;
     padding-top: 15px;
     font-size: 13px;
@@ -291,34 +301,33 @@ ul {
 .hamburguesa {
     display: none;
     background: none;
-    border: 2px solid #c95d1e;
+    border: 2px solid #2a2fbb;
     font-size: 1.5rem;
     cursor: pointer;
-    color: #c95d1e;
+    color: #2a2fbb;
     padding: 4px 10px;
     border-radius: 6px;
 }
 
 /* RESPONSIVE */
 
-@media(max-width:992px) {
+@media(max-width: 1025px) {
 
     /* expande verticalmente el header */
     header  {
-        height: auto;
+        height: auto !important;
         min-height: 5rem;
         flex-wrap: wrap;
         padding: 10px 16px;
-        gap: 8px;
     }
 
     .logo {
-        height: 9rem;
+        height: 100px;
+        width: auto;
     }
 
     .hamburguesa {
         display: block !important;
-        margin-right: 60px;
     }
 
     /* Ocultar menu y registro */
@@ -327,6 +336,7 @@ ul {
         display: none !important;
         width: 100%;
         order: 3;
+        background: #9eb8ff;
     }
 
     .menu.abierto {
@@ -345,7 +355,7 @@ ul {
     }
 
     .registro {
-        display: none;
+        display: none !important;
         width: 100%;
         order: 4;
         flex-direction: column;
@@ -356,7 +366,7 @@ ul {
     }
 
     .registro.abierto {
-        display: flex;
+        display: flex !important;
     }
 
     .about-content{
@@ -381,7 +391,30 @@ ul {
 
     .footer {
         padding: 3rem 2rem;
-        border-top-left-radius: 30px 60px;
+    }
+
+    .modal-contenido {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    /* Footer */
+    .footer_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer {
+        padding: 2.5rem 1.5rem;
+        
+    }
+
+    .modal-contenido {
+        width: 95%;
+        padding: 25px 15px;
     }
 
 }
