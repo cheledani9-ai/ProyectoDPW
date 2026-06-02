@@ -8,7 +8,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
-    width: 100%;
 }
 
 /* menu */
@@ -196,7 +195,6 @@ button {
 
 span {
     font-weight: bold;
-    font-size: 5px
 }
 
 .contenido {
@@ -391,19 +389,24 @@ span {
     }
 
     .logo {
-        height: 60px;
+        height: 80px;
     }
 
     .card {
-        height: 350px;
+        width: 65%;
+        height: auto;
     }
 
     .card img {
-        padding-right: 20px;
+        width: 55%;
+        height: auto;
+        padding-right: 5px;
+       
     }
 
     .objetivo {
-        width: 70%;
+        width: 80%;
+        padding: 30px;
     }
 }
 
@@ -490,18 +493,28 @@ span {
     }
 
     .card {
-        width: 85%;
+        width: 55%;
         height: auto;
     }
 
-    
+    .card img {
+        width: 45%;
+        height: auto;
+    }
 
     /* Objetivo */
     .objetivo {
-        width: 85%;
+        width: 65%;
+        height: auto;
         flex-direction: column;
         border-radius: 40px;
+        padding: 30px;
+    }
+
+    .objetivo img {
+        width: 75%;
         height: auto;
+        padding-left: 30%;
     }
 
     .contenido {
@@ -545,14 +558,27 @@ span {
     }
 
     .card {
-        width: 95%;
+        width: 75%;
+    }
+
+    .card img {
+        width: 50%;
+        height: auto;
     }
 
     .objetivo {
-        width: 95%;
+        width: 75%;
+        height: auto;
         text-align: center;
         border-radius: 30px;
         padding: 30px 20px;
+    }
+
+    .objetivo img {
+        width: 75%;
+        height: auto;
+        padding-left: 60px;
+    
     }
 
     /* Footer 1 columna */
