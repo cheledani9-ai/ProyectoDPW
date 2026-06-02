@@ -13,8 +13,8 @@ body {
 
 header  {
         height: 5rem;
-        background: #FDF0D5;
-        border: 2px solid rgb(201, 102, 10);
+        background: #9eb8ff;
+        border: 1px solid #2a2fbb;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -31,12 +31,18 @@ header  {
         float:initial ;
         }
 
+.menu ul {
+    display: flex;
+    gap: 25px;
+}
+
 a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: #000000;
         }
 
 .menu li {
+    transition: background 0.3s;
     transition: transform 0.4s;
     padding: 10px;
 }
@@ -48,7 +54,7 @@ ul {
 }
 
 .menu li:hover{
-    background-color: #F4A261;
+    background-color: #edf3ff;
     border-radius: 20px;
     padding: 8px;
     transform: scale(1);
@@ -69,9 +75,9 @@ ul {
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    background: #f88425;
+    background: #2a2fbb;
     cursor: pointer;
-    color: white;
+    color: #ffffff;
 }
 
 
@@ -83,7 +89,7 @@ ul {
 }
 
 .intro {
-    background-color: #f5d8a1b0;
+    background-color: #9eb8ff;
     border-radius: 10px;
     padding: 20px;
     
@@ -97,7 +103,7 @@ ul {
 .linea-decorativa {
     width: 60px;
     height: 3px;
-    background-color: rgb(233, 196, 106);
+    background-color: #ff6b6b;
     margin: 15px auto 0 auto;
     border: none;
     opacity: 1;
@@ -192,7 +198,7 @@ margin-bottom: 10px;
     background: #ffffff;
     padding: 60px;
     border-radius: 12px;
-    width: 410px;
+    width: 400px;
     position: relative;
     transform: scale(0.8);
     transition: transform 0.3s ease;
@@ -225,8 +231,8 @@ margin-bottom: 10px;
 }
 
 .modal-contenido input[type="submit"] {
-    background: #f88425;
-    color: white;
+    background: #2a2fbb;
+    color: #ffffff;
     border: none;
     cursor: pointer;
     transition: 0.3s;
@@ -234,27 +240,17 @@ margin-bottom: 10px;
 }
 
 .modal-contenido input[type="submit"]:hover {
-    background: #e06f1a;
+    background: #9eb8ff;
+    color: #000000;
+    border: 2px solid #2a2fbb;
 }
 
-/* Botón hamburguesa — oculto en escritorio */
-.hamburguesa {
-    display: none;
-    background: none;
-    border: 2px solid #c95d1e;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #c95d1e;
-    padding: 4px 10px;
-    border-radius: 6px;
-}
 
 /* footer */
 
 .footer {
-background: #dd7621;
-border-top-left-radius: 50% 50px;
-color: #ffffff;
+background: #9eb8ff;
+color: #000000;
 padding: 2rem;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 clear: both;
@@ -275,33 +271,41 @@ margin-top: 50px;
 }
 
 .footer-col ul {
-    list-style: none;
-    padding: 1px;
-    flex-direction: column;
     display: flex;
-    
-    
-    
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
 }
 
 .footer-col ul li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     transform: 0.3s;
 }
 
 .footer-col ul li a:hover {
-    color: lightslategray;
+    color: white;
 }
 
 .footer-bottom {
     text-align: center;
-    border-top: 1px solid rgb(255, 255, 255);
+    border-top: 3px solid rgb(255, 255, 255);
     margin-top: 30px;
     padding-top: 15px;
     font-size: 13px;
 }
 
+/* Botón hamburguesa — oculto en escritorio */
+.hamburguesa {
+    display: none;
+    background: none;
+    border: 2px solid #2a2fbb;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #2a2fbb;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
 
 /* RESPONSIVE */
 
@@ -317,34 +321,33 @@ margin-top: 50px;
 }
 
 
-@media (max-width: 992px) {
+@media (max-width: 1025px) {
 
     header {
         height: auto;
         min-height: 5rem;
         flex-wrap: wrap;
         padding: 10px 16px;
-        gap: 8px;
-
     }
 
     .logo {
-        height: 9rem;
+        height: 100px;
+        width: auto;
     }
 
     .hamburguesa {
-        display: block;
-        margin-right: 50px;
+        display: block !important;
     }
 
     .menu {
         display: none;
         width: 100%;
         order: 3;
+        background: #9eb8ff;
     }
 
     .menu.abierto {
-        display: block;
+        display: block !important;
     }
 
     .menu ul {
@@ -354,12 +357,12 @@ margin-top: 50px;
     }
 
     .menu li {
-        padding: 12px 16px;
-        border-bottom: 1px solid #f0d8b0;
+        padding: 10px 16px;
+        border-bottom: 1px solid #ffffff;
     }
 
     .registro {
-        display: none;
+        display: none !important;
         width: 100%;
         order: 4;
         flex-direction: column;
@@ -370,7 +373,7 @@ margin-top: 50px;
     }
 
     .registro.abierto {
-        display: flex;
+        display: flex !important;
     }
 
     .card-img-top {
@@ -384,7 +387,31 @@ margin-top: 50px;
     }
 
     .footer {
-        border-top-left-radius: 30px 60px;
+        padding: 3rem 2rem;
     }
+
+    .modal-contenido {
+        width: 90%;
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* Footer */
+    .footer_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer {
+        padding: 2.5rem 1.5rem;
+        
+    }
+
+    .modal-contenido {
+        width: 95%;
+        padding: 25px 15px;
+    }
+
 }
 
