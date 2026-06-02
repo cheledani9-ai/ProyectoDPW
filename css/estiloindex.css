@@ -28,8 +28,8 @@ header{
         list-style: none;
         display: flex;    
         gap: 50px;
-        float:initial ;
-        }
+        float: initial;
+    }
 
 .menu ul {
     display: flex;
@@ -71,14 +71,7 @@ ul {
     margin-right: 30px;
 }  
 
-/*.registro {     
-        justify-content: center;
-        list-style: none;
-        display: flex;
-        gap: 2%;
-        margin-right: 1%;
-    }*/
-    
+
 .registro button {
     padding: 10px 20px;
     border: none;
@@ -233,7 +226,6 @@ span {
     background: rgba(0,0,0,0.5);
     justify-content: center;
     align-items: center;
-
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1000;
@@ -287,9 +279,8 @@ span {
 }
 
 .modal-contenido input[type="submit"] {
-    border: 2px solid #2a2fbb;
-    background: #9eb8ff;
-    color: #000000;
+    background: #2a2fbb;
+    color: #ffffff;
     border: none;
     cursor: pointer;
     transition: 0.3s;
@@ -297,7 +288,9 @@ span {
 }
 
 .modal-contenido input[type="submit"]:hover {
-    background: #edf3ff
+    background: #9eb8ff;
+    color: #000000;
+    border: 2px solid #2a2fbb;
 }
 
 /* footer */
@@ -421,7 +414,8 @@ span {
     }
 
     .logo {
-        height: 70px;
+        height: 100px;
+        width: auto;
     }
 
     .hamburguesa {
@@ -447,7 +441,7 @@ span {
 
     .menu li {
         padding: 10px 16px;
-        border-bottom: 1px solid #2a2fbb;
+        border-bottom: 1px solid #ffffff;
     }
 
     .registro {
@@ -581,7 +575,7 @@ span {
     
     }
 
-    /* Footer 1 columna */
+    /* Footer */
     .footer_container {
         grid-template-columns: repeat(2, 1fr);
     }
