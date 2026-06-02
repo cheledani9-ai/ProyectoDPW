@@ -13,8 +13,8 @@ body {
 /* menu */
 header{
         height: 5rem;
-        background: #FDF0D5;
-        border: 2px solid rgb(201, 102, 10);
+        background: #9eb8ff;
+        border: 1px solid #2a2fbb;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -54,7 +54,7 @@ ul {
 }
 
 .menu li:hover{
-        background-color: #F4A261;
+        background-color: #edf3ff;
         border-radius: 20px;
         padding: 8px;
         transform: scale(1);
@@ -83,17 +83,17 @@ ul {
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    background: #f88425;
+    background: #2a2fbb;
     cursor: pointer;
-    color: white;
+    color: #ffffff;
 }
 
 /* banner */
 
 .banner {
     position: relative;
-    background: #FDF0D5;
-    border:2px solid #c95d1e;
+    background: #9eb8ff;
+    border-top: 1px solid #2a2fbb;
     height: 500px;
     display: flex;
     align-items: center;
@@ -121,7 +121,8 @@ button {
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    background: #f88425;
+    background: #2a2fbb;
+    color: #ffffff;
     cursor: pointer;
 }
 
@@ -144,13 +145,17 @@ button {
 
 /* contenido  */ 
 
+.contenido_container {
+    background: #9eb8ff;
+}
+
 .servicios {
-    background: #ffffff;
+    background: #9eb8ff;
     text-align: center;
 } 
 
 .servicios h1 {
-    margin-top: 3rem;
+    padding-top: 3rem;
     margin-bottom: 3rem;
 }
 
@@ -172,7 +177,8 @@ button {
 }
 
 .card {
-    background: #FDF0D5;
+    background: #edf3ff;
+    border: 1px solid #2a2fbb;
     display: block;
     text-align: center;
     margin: 15px;
@@ -192,11 +198,10 @@ span {
 }
 
 .contenido {
-    
-    background-color: white;
+    background-color: #9eb8ff;
     height: 50em;
     padding-top: 3rem;
-    border-bottom: 1px solid #c95d1e;
+    border-bottom: 1px solid #2a2fbb;
     display: flex;
     justify-content: center;
     margin-bottom: 120px;
@@ -204,14 +209,15 @@ span {
 }
 
 .objetivo {
-    background: #FDF0D5;
-    border: 1px solid #c95d1e;
+    background: #edf3ff;
+    border: 1px solid #2a2fbb;
     height: 30%;
-    width: 50%;
+    width: 60%;
     display: flex;
-    gap: 3rem;
+    gap: 1rem;
     border-radius: 90px;
-    padding: 4%;
+    padding: 2%;
+    overflow: hidden;
 } 
 
 
@@ -281,8 +287,9 @@ span {
 }
 
 .modal-contenido input[type="submit"] {
-    background: #f88425;
-    color: white;
+    border: 2px solid #2a2fbb;
+    background: #9eb8ff;
+    color: #000000;
     border: none;
     cursor: pointer;
     transition: 0.3s;
@@ -290,17 +297,17 @@ span {
 }
 
 .modal-contenido input[type="submit"]:hover {
-    background: #e06f1a;
+    background: #edf3ff
 }
 
 /* footer */
 
 .footer {
-    background: #dd7621;
-    border-top-left-radius: 45% 100px;
-    color: #ffffff;
+    background: #9eb8ff;
+    color: #000000;
     padding: 5.2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid #2a2fbb;
 }
 
 .footer_container {
@@ -325,17 +332,17 @@ span {
 
 .footer-col ul li a {
     text-decoration: none;
-    color: white;
+    color: #000000;
     transform: 0.3s;
 }
 
 .footer-col ul li a:hover {
-    color: #a5a3a3;
+    color: white;
 }
 
 .footer-bottom {
     text-align: center;
-    border-top: 1px solid rgb(255, 255, 255);
+    border-top: 3px solid rgb(255, 255, 255);
     margin-top: 30px;
     padding-top: 15px;
     font-size: 13px;
@@ -348,10 +355,10 @@ span {
 .hamburguesa {
     display: none;
     background: none;
-    border: 2px solid #c95d1e;
+    border: 2px solid #2a2fbb;
     font-size: 1.5rem;
     cursor: pointer;
-    color: #c95d1e;
+    color: #2a2fbb;
     padding: 4px 10px;
     border-radius: 6px;
 }
@@ -420,7 +427,7 @@ span {
         display: none !important;
         width: 100%;
         order: 3;
-        background: #FDF0D5;
+        background: #9eb8ff;
     }
 
     .menu.abierto {
@@ -435,7 +442,7 @@ span {
 
     .menu li {
         padding: 10px 16px;
-        border-bottom: 1px solid #f0d8b0;
+        border-bottom: 1px solid #2a2fbb;
     }
 
     .registro {
@@ -508,7 +515,6 @@ span {
 
     .footer {
         padding: 3rem 2rem;
-        border-top-left-radius: 30px 60px;
     }
 
     .modal-contenido {
@@ -549,12 +555,12 @@ span {
 
     /* Footer 1 columna */
     .footer_container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .footer {
         padding: 2.5rem 1.5rem;
-        border-top-left-radius: 20px 40px;
+        
     }
 
     .modal-contenido {
