@@ -465,6 +465,23 @@ input {
         display: flex;
     }
 
+     /* El contenedor principal pasa de 2 columnas a 1 columna */
+    .contenedorP {
+        grid-template-columns: 1fr; 
+    }
+
+    /* La imagen del banner se ajusta para no deformarse */
+    .banner-img img {
+        height: auto;
+        max-height: 350px;
+        object-fit: cover;
+    }
+
+    /* El footer pasa de 4 columnas a 2 columnas */
+    .footer_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     /* Footer 2 columnas */
     .footer_container {
         grid-template-columns: repeat(2, 1fr);
@@ -472,5 +489,49 @@ input {
 
     .footer {
         border-top-left-radius: 30px 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Modificamos el header para que el logo y el menú se apilen */
+    header {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        height: auto; /* Quitamos la altura fija */
+        padding: 15px 0;
+        gap: 15px;
+    }
+
+    /* El menú principal se ajusta para pantallas pequeñas */
+    ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: 10px;
+    }
+
+    .menu {
+        gap: 10px;
+    }
+
+    /* Los íconos de contacto (Ubicación, Teléfono, etc.) pasan de 2 a 1 columna */
+    .contenedoriconos {
+        grid-template-columns: 1fr; 
+    }
+
+    /* El formulario ocupa todo el ancho disponible */
+    .form1 {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* El footer pasa a tener solo 1 columna (todo apilado) */
+    .footer_container {
+        grid-template-columns: 1fr;
+        text-align: center; /* Centramos el texto en el celular */
+    }
+
+    /* Ajustamos el borde del footer para que se vea bien en celular */
+    .footer {
+        border-top-left-radius: 50px;
     }
 }
