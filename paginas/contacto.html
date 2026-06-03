@@ -26,73 +26,53 @@
     </header>
 
 <!--contenido de la pagina inicio-->
-              <div class="contenedorP">   
+
+          <main class="contenedorP">   
+              <section class="banner">
+                      <div class="banner-img">
+                          <img src="../img/presenciaonline.jpg" alt="banner">
+                      </div>
+              </section>
                   <div class="contenedor1p">
-                          <div class="contenedoriconos">
-                              <div class="iconos">
-                                  <img src="../img/img/iconoUbicacion.PNG" alt="">
+                        <div class="contenedoriconos">
+                            <div class="iconos">
+                                <img src="../img/iconoUbicacion.PNG" alt="">
                                   <h3>Nuestra oficina</h3>
                                   <p>calle nueva, numero 26, San Salvador</p><br>
-                              </div> 
-                              <div class="iconos">
-                                 <img src="../img/img/iconoTelefono.PNG" alt="">
+                            </div> 
+                            <div class="iconos">
+                                <img src="../img/iconoTelefono.PNG" alt="">
                                   <h3>Telefono</h3>
                                   <p>7777-8888</p><br>
-                              </div> 
-
-                              <div class="iconos">
-                                  <img src="../img/img/iconoWhatsapp.PNG" alt="">
+                            </div> 
+                            <div class="iconos">
+                                <img src="../img/iconoWhatsapp.PNG" alt="">
                                   <h3>Whatsapp</h3>
                                   <p>7309-4265</p><br>
-                              </div>
-
-                              <div class="iconos">
-                                <img src="../img/img/iconoCorreo.PNG" alt="">
+                            </div>
+                            <div class="iconos">
+                                <img src="../img/iconoCorreo.PNG" alt="">
                                 <h3>Correo</h3>
                                 <p>sysnova@gmail.com</p>
-                              </div>
-                              <br>
-                          </div>
-
-               </div>
-
-                <section class="banner">
-                          <div class="banner-texto">
-                              <h2>Comienza a vender Online</h2>
-                            
-                          </div>
-
-                          <div class="banner-img">
-                              <img src="../img/img/comienzaavenderonline.PNG" alt="banner">
-                          </div>
-
-              
-                  </section>
-
-                  <div class="contenedor2p">
-                      
-                          <h2 class="tituloform">  ENVIANOS UN CORREO RAPIDO</h2>
-                          <form action="" class="form1">
-                           
-                              <input type="text" placeholder="nombre" class="controls"><br>
-                                                  
-                              <input type="email" placeholder="digite su correo" class="controls"><br>
-                            
-                              <textarea name="" id="" placeholder="digite su mensaje" class="textarea"></textarea><br>
-
-                              
-                              <input type="button" value="Enviar mensaje" class="boton">
-
-
-
-                          </form>
-                          
+                            </div>
+                            <br>
+                        </div>
                   </div>
+                  <div class="contenedor3">
+                  </div>
+                  <div class="contenedor2p">
+                      <h2 class="tituloform">  ENVIANOS UN WHATSAPP</h2>
+                        <form action="" class="form1">
+                            <input type="text" placeholder="Nombre" class="controls" required><br>                  
+                            <input type="email" placeholder="Digite su correo" class="controls" required><br>
+                            <textarea name="" id="" placeholder="Digite su mensaje" class="textarea" required></textarea><br>                           
+                            <input type="button" value="Enviar mensaje" class="boton">
+                        </form>
+                  </div>
+                  <br><br><br><br><br>
+              </main>
 
-              </div>
-
-<!--contenido de la pagina fin-->
-
+      <!--footer-->
     <footer class="footer">   
   <div class="footer_container">
 
@@ -126,6 +106,56 @@
         <li>Email: info@sysnova.com</li>
         <li>Tel: +503 0000-0000</li>
         <li>San Salvador</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 SysNova - Todos los derechos reservados</p>
+  </div>
+</footer>
+
+<!--Ventana emergente registro-->
+<div id="modal" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <h2>Registro de Empresa</h2>
+
+        <form action="">
+        <label for="nombre" class="form-label">Nombre de la empresa</label>
+            <input type="text" placeholder="Escriba aqui" class="form-control" required>
+        <label for="Correo">Correo</label>
+            <input type="email" placeholder="Escriba aqui" class="form-control" required>
+        <label for="telefono">Telefono</label>
+            <input type="tel" placeholder="Escriba aqui" required>
+            <textarea placeholder="Descripcion" name="descripcion"></textarea>
+            <input type="submit" value="Registrar">
+        </form>
+    </div>
+</div>
+
+<!-- Ventana emergente inicio de sesion -->
+
+<div id="modalLogin" class="modal" >
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModalLogin()">&times;</span>
+    <h2>Inicia Sesión</h2>
+
+    <form action="">
+    <label for="correo">Correo</label>
+        <input type="email" placeholder="Escriba aqui" required>
+    <label for="password">Contraseña</label>
+        <input type="password" placeholder="Escriba aqui" required>
+        <h5 class="forgotpassword">¿Olvidaste tu contraseña?</h5>
+        <h5 class="forgotpassword"><a href="#" style="color: #f88425;">Recuperar contraseña</a></h5>
+    <input type="submit" value="Iniciar Sesión">
+    </form>
+  </div>
+</div>
+<script src="../javascript/script.js"></script>
+</body>
+</html>
       </ul>
     </div>
 
