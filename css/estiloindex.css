@@ -441,7 +441,8 @@ span {
 
     .menu li {
         padding: 10px 16px;
-        border-bottom: 1px solid #ffffff;
+        border-radius: 50px;
+        border-bottom: 2px solid #ffffff;
     }
 
     .registro {
