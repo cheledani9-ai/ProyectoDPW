@@ -351,6 +351,7 @@ ul {
 
     .menu li {
         padding: 10px 16px;
+        border-radius: 50px;
         border-bottom: 2px solid white;
     }
 
